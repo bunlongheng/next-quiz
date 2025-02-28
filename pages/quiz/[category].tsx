@@ -9,12 +9,12 @@ export default function QuizPage() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
 
-  // Gradient colors for each option
+  
   const optionColors = [
-    "from-blue-500 to-purple-500", // Blue to Purple
-    "from-green-500 to-teal-500",  // Green to Teal
-    "from-orange-500 to-red-500",  // Orange to Red
-    "from-pink-500 to-indigo-500", // Pink to Indigo
+    "from-blue-500 to-sky-800", 
+    "from-green-500 to-teal-800",  
+    "from-yellow-500 to-amber-800",  
+    "from-pink-500 to-indigo-800", 
   ];
 
   useEffect(() => {
@@ -28,9 +28,10 @@ export default function QuizPage() {
 
   const handleAnswer = (option) => {
     setSelectedAnswer(option);
-  
-    // Check if the answer is correct
-    if (option === questions[currentQuestionIndex].answer) {
+
+    
+    const isCorrect = option === questions[currentQuestionIndex].answer;
+    if (isCorrect) {
       setScore((prev) => prev + 1);
       const correctSound = new Audio("/sounds/correct.mp3");
       correctSound.play();
@@ -38,15 +39,17 @@ export default function QuizPage() {
       const wrongSound = new Audio("/sounds/wrong.mp3");
       wrongSound.play();
     }
-  
-    // Move to the next question immediately
-    if (currentQuestionIndex + 1 < questions.length) {
-      setCurrentQuestionIndex((prev) => prev + 1);
-      setSelectedAnswer(null); // Reset selected answer
-    } else {
-      // Quiz is over, show results
-      router.push(`/results?score=${score}&total=${questions.length}`);
-    }
+
+    
+    setTimeout(() => {
+      if (currentQuestionIndex + 1 < questions.length) {
+        setCurrentQuestionIndex((prev) => prev + 1);
+        setSelectedAnswer(null); 
+      } else {
+        
+        router.push(`/results?score=${score + (isCorrect ? 1 : 0)}&total=${questions.length}`);
+      }
+    }, 500); 
   };
 
   if (!category || questions.length === 0) {
@@ -78,8 +81,8 @@ export default function QuizPage() {
                 focus:outline-none focus:ring-2 focus:ring-blue-300
                 ${selectedAnswer === option
                   ? option === currentQuestion.answer
-                    ? "bg-gradient-to-r from-green-500 to-green-600 shadow-lg"
-                    : "bg-gradient-to-r from-red-500 to-red-600 shadow-lg"
+                    ? "bg-gradient-to-r from-green-500 to-green-600 shadow-lg" 
+                    : "bg-gradient-to-r from-red-500 to-red-600 shadow-lg" 
                   : ""
                 }
               `}

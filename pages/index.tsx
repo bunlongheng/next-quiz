@@ -2,14 +2,14 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 const quizzes = [
-  { title: "Aircraft", emoji: "✈️", image: "/images/aircrafts.png", tags: ["Vehicles", "Technology"], slug: "aircraft" },
+  { title: "Aircraft", emoji: "✈️", image: "/images/aircrafts.png", tags: ["Vehicles", "Technology"], slug: "aircrafts" },
   { title: "Birds", emoji: "🕊️", image: "/images/birds.png", tags: ["Nature", "Animals"], slug: "birds" },
   { title: "Construction Vehicles", emoji: "🚜", image: "/images/construction-vehicles.png", tags: ["Machines", "Vehicles"], slug: "construction-vehicles" },
   { title: "Dinosaurs", emoji: "🦖", image: "/images/dinosaurs.png", tags: ["History", "Science"], slug: "dinosaurs" },
   { title: "Fruits", emoji: "🍍", image: "/images/fruits.png", tags: ["Food", "Health"], slug: "fruits" },
   { title: "Insects", emoji: "🐝", image: "/images/insects.png", tags: ["Nature", "Tiny Creatures"], slug: "insects" },
   { title: "Reptiles", emoji: "🐍", image: "/images/reptiles.png", tags: ["Cold-Blooded", "Wildlife"], slug: "reptiles" },
-  { title: "U.S. States", emoji: "🗺️", image: "/images/states.png", tags: ["Geography", "Trivia"], slug: "us-states" },
+  { title: "U.S. States", emoji: "🗺️", image: "/images/states.png", tags: ["Geography", "Trivia"], slug: "states" },
 ];
 
 export default function Home() {

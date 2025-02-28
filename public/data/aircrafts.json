@@ -1,0 +1,52 @@
+[
+    {
+      "question": "Which aircraft is known as the 'Queen of the Skies'?",
+      "options": ["Boeing 747", "Airbus A380", "Concorde", "Boeing 787"],
+      "answer": "Boeing 747"
+    },
+    {
+      "question": "Which aircraft holds the record for the fastest commercial flight?",
+      "options": ["Concorde", "Boeing 747", "Airbus A380", "Boeing 787"],
+      "answer": "Concorde"
+    },
+    {
+      "question": "Which aircraft is the largest passenger airliner in the world?",
+      "options": ["Airbus A380", "Boeing 747", "Boeing 787", "Airbus A350"],
+      "answer": "Airbus A380"
+    },
+    {
+      "question": "Which aircraft is known for its fuel efficiency and use of composite materials?",
+      "options": ["Boeing 787", "Airbus A320", "Boeing 747", "Airbus A380"],
+      "answer": "Boeing 787"
+    },
+    {
+      "question": "Which aircraft is commonly used for short-haul flights and is known for its reliability?",
+      "options": ["Boeing 737", "Airbus A320", "Embraer E-Jet", "Bombardier CRJ"],
+      "answer": "Boeing 737"
+    },
+    {
+      "question": "Which aircraft is known for its distinctive double-deck design?",
+      "options": ["Airbus A380", "Boeing 747", "Boeing 787", "Airbus A350"],
+      "answer": "Airbus A380"
+    },
+    {
+      "question": "Which aircraft was the first to break the sound barrier in level flight?",
+      "options": ["Bell X-1", "Concorde", "SR-71 Blackbird", "F-16 Fighting Falcon"],
+      "answer": "Bell X-1"
+    },
+    {
+      "question": "Which aircraft is known for its role as a military transport plane?",
+      "options": ["C-130 Hercules", "Boeing 747", "Airbus A380", "Boeing 787"],
+      "answer": "C-130 Hercules"
+    },
+    {
+      "question": "Which aircraft is known for its stealth capabilities?",
+      "options": ["F-22 Raptor", "Boeing 747", "Airbus A320", "Boeing 787"],
+      "answer": "F-22 Raptor"
+    },
+    {
+      "question": "Which aircraft is known for its long-range and use in international flights?",
+      "options": ["Boeing 777", "Airbus A320", "Boeing 737", "Embraer E-Jet"],
+      "answer": "Boeing 777"
+    }
+  ]

@@ -1,0 +1,52 @@
+[
+    {
+      "question": "What is the largest dinosaur?",
+      "options": ["T-Rex", "Brachiosaurus", "Spinosaurus", "Argentinosaurus"],
+      "answer": "Argentinosaurus"
+    },
+    {
+      "question": "Which dinosaur had three horns?",
+      "options": ["Stegosaurus", "Triceratops", "Velociraptor", "Baryonyx"],
+      "answer": "Triceratops"
+    },
+    {
+      "question": "What did most dinosaurs eat?",
+      "options": ["Meat", "Plants", "Both", "Insects"],
+      "answer": "Both"
+    },
+    {
+      "question": "Which dinosaur is known for its long neck?",
+      "options": ["Velociraptor", "Pterodactyl", "Brachiosaurus", "Stegosaurus"],
+      "answer": "Brachiosaurus"
+    },
+    {
+      "question": "Which dinosaur could fly?",
+      "options": ["Pteranodon", "T-Rex", "Velociraptor", "Brachiosaurus"],
+      "answer": "Pteranodon"
+    },
+    {
+      "question": "Which dinosaur is known as the 'king of dinosaurs'?",
+      "options": ["Velociraptor", "Triceratops", "T-Rex", "Baryonyx"],
+      "answer": "T-Rex"
+    },
+    {
+      "question": "Which dinosaur had a spiky tail?",
+      "options": ["Stegosaurus", "Ankylosaurus", "Pteranodon", "Parasaurolophus"],
+      "answer": "Stegosaurus"
+    },
+    {
+      "question": "Which period did the dinosaurs go extinct?",
+      "options": ["Triassic", "Jurassic", "Cretaceous", "Paleogene"],
+      "answer": "Cretaceous"
+    },
+    {
+      "question": "What was a baby dinosaur called?",
+      "options": ["Chick", "Cub", "Hatchling", "Pup"],
+      "answer": "Hatchling"
+    },
+    {
+      "question": "Which dinosaur was the fastest?",
+      "options": ["T-Rex", "Velociraptor", "Gallimimus", "Triceratops"],
+      "answer": "Gallimimus"
+    }
+  ]

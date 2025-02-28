@@ -1,0 +1,52 @@
+[
+    {
+      "question": "Which vehicle is used to dig large holes or trenches?",
+      "options": ["Bulldozer", "Excavator", "Crane", "Forklift"],
+      "answer": "Excavator"
+    },
+    {
+      "question": "What is the primary function of a bulldozer?",
+      "options": ["Lifting heavy materials", "Leveling ground", "Transporting goods", "Digging deep holes"],
+      "answer": "Leveling ground"
+    },
+    {
+      "question": "Which vehicle is used to lift and move heavy materials vertically?",
+      "options": ["Crane", "Backhoe", "Dump Truck", "Grader"],
+      "answer": "Crane"
+    },
+    {
+      "question": "What is the main purpose of a dump truck?",
+      "options": ["Digging trenches", "Transporting loose materials", "Compacting soil", "Lifting heavy loads"],
+      "answer": "Transporting loose materials"
+    },
+    {
+      "question": "Which vehicle is used to compact soil or asphalt?",
+      "options": ["Roller", "Forklift", "Excavator", "Bulldozer"],
+      "answer": "Roller"
+    },
+    {
+      "question": "What is the function of a grader?",
+      "options": ["Digging trenches", "Leveling surfaces", "Lifting heavy materials", "Compacting soil"],
+      "answer": "Leveling surfaces"
+    },
+    {
+      "question": "Which vehicle is used to lift and move pallets of materials?",
+      "options": ["Forklift", "Crane", "Backhoe", "Dump Truck"],
+      "answer": "Forklift"
+    },
+    {
+      "question": "What is the primary use of a backhoe?",
+      "options": ["Digging and lifting", "Leveling ground", "Compacting soil", "Transporting materials"],
+      "answer": "Digging and lifting"
+    },
+    {
+      "question": "Which vehicle is used to transport concrete to construction sites?",
+      "options": ["Concrete Mixer Truck", "Dump Truck", "Crane", "Bulldozer"],
+      "answer": "Concrete Mixer Truck"
+    },
+    {
+      "question": "What is the purpose of a skid-steer loader?",
+      "options": ["Digging deep holes", "Lifting heavy materials", "Performing small-scale construction tasks", "Compacting soil"],
+      "answer": "Performing small-scale construction tasks"
+    }
+  ]

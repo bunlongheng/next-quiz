@@ -1,0 +1,52 @@
+[
+    {
+      "question": "Which fruit is known as the 'king of fruits'?",
+      "options": ["Mango", "Banana", "Apple", "Orange"],
+      "answer": "Mango"
+    },
+    {
+      "question": "Which fruit is the most widely consumed in the world?",
+      "options": ["Apple", "Banana", "Orange", "Watermelon"],
+      "answer": "Banana"
+    },
+    {
+      "question": "Which fruit is known for its high vitamin C content?",
+      "options": ["Orange", "Apple", "Grapes", "Pineapple"],
+      "answer": "Orange"
+    },
+    {
+      "question": "Which fruit is used to make wine?",
+      "options": ["Grapes", "Apple", "Pear", "Peach"],
+      "answer": "Grapes"
+    },
+    {
+      "question": "Which fruit has a green outer skin and red inside with black seeds?",
+      "options": ["Watermelon", "Pineapple", "Kiwi", "Dragon Fruit"],
+      "answer": "Watermelon"
+    },
+    {
+      "question": "Which fruit is known for its spiky outer skin and sweet yellow flesh?",
+      "options": ["Pineapple", "Dragon Fruit", "Kiwi", "Mango"],
+      "answer": "Pineapple"
+    },
+    {
+      "question": "Which fruit is often associated with the phrase 'an apple a day keeps the doctor away'?",
+      "options": ["Apple", "Banana", "Orange", "Pear"],
+      "answer": "Apple"
+    },
+    {
+      "question": "Which fruit is known for its high potassium content?",
+      "options": ["Banana", "Orange", "Apple", "Grapes"],
+      "answer": "Banana"
+    },
+    {
+      "question": "Which fruit is often used to make guacamole?",
+      "options": ["Avocado", "Tomato", "Mango", "Pineapple"],
+      "answer": "Avocado"
+    },
+    {
+      "question": "Which fruit is known for its small size and red color with tiny seeds on the outside?",
+      "options": ["Strawberry", "Raspberry", "Blueberry", "Blackberry"],
+      "answer": "Strawberry"
+    }
+  ]

@@ -1,0 +1,77 @@
+[
+    {
+      "question": "What is the capital of California?",
+      "options": ["San Francisco", "Los Angeles", "Sacramento", "San Diego"],
+      "answer": "Sacramento"
+    },
+    {
+      "question": "Which state is known as the 'Sunshine State'?",
+      "options": ["California", "Hawaii", "Florida", "Arizona"],
+      "answer": "Florida"
+    },
+    {
+      "question": "What is the largest U.S. state by area?",
+      "options": ["California", "Texas", "Alaska", "Montana"],
+      "answer": "Alaska"
+    },
+    {
+      "question": "Which state has the nickname 'The Lone Star State'?",
+      "options": ["Arizona", "New Mexico", "Texas", "Nevada"],
+      "answer": "Texas"
+    },
+    {
+      "question": "What is the capital of New York?",
+      "options": ["New York City", "Albany", "Buffalo", "Rochester"],
+      "answer": "Albany"
+    },
+    {
+      "question": "Which state is famous for the Grand Canyon?",
+      "options": ["Utah", "Nevada", "Arizona", "Colorado"],
+      "answer": "Arizona"
+    },
+    {
+      "question": "What is the smallest U.S. state by area?",
+      "options": ["Rhode Island", "Delaware", "Connecticut", "Vermont"],
+      "answer": "Rhode Island"
+    },
+    {
+      "question": "Which state is known for Disneyland?",
+      "options": ["California", "Florida", "Nevada", "Texas"],
+      "answer": "California"
+    },
+    {
+      "question": "Which state is called the 'Land of 10,000 Lakes'?",
+      "options": ["Wisconsin", "Minnesota", "Michigan", "North Dakota"],
+      "answer": "Minnesota"
+    },
+    {
+      "question": "What is the capital of Illinois?",
+      "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+      "answer": "Springfield"
+    },
+    {
+      "question": "Which U.S. state is the birthplace of the first flight?",
+      "options": ["North Carolina", "Ohio", "Virginia", "California"],
+      "answer": "North Carolina"
+    },
+    {
+      "question": "Which state is known as the 'Bluegrass State'?",
+      "options": ["Kentucky", "Tennessee", "West Virginia", "Indiana"],
+      "answer": "Kentucky"
+    },
+    {
+      "question": "Which U.S. state has the most active volcanoes?",
+      "options": ["California", "Alaska", "Hawaii", "Washington"],
+      "answer": "Alaska"
+    },
+    {
+      "question": "Which U.S. state is home to the Statue of Liberty?",
+      "options": ["New Jersey", "New York", "Massachusetts", "Pennsylvania"],
+      "answer": "New York"
+    },
+    {
+      "question": "Which U.S. state is home to Mount Rushmore?",
+      "options": ["Wyoming", "Montana", "South Dakota", "North Dakota"],
+      "answer": "South Dakota"
+    }
+  ]

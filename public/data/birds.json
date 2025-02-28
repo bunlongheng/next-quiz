@@ -1,0 +1,52 @@
+[
+    {
+      "question": "Which bird is known for its ability to mimic human speech?",
+      "options": ["Parrot", "Eagle", "Penguin", "Owl"],
+      "answer": "Parrot"
+    },
+    {
+      "question": "What is the fastest bird in the world?",
+      "options": ["Bald Eagle", "Peregrine Falcon", "Hawk", "Sparrow"],
+      "answer": "Peregrine Falcon"
+    },
+    {
+      "question": "Which bird is famous for its long migration journey?",
+      "options": ["Swan", "Arctic Tern", "Dove", "Seagull"],
+      "answer": "Arctic Tern"
+    },
+    {
+      "question": "Which bird cannot fly?",
+      "options": ["Robin", "Ostrich", "Hawk", "Blue Jay"],
+      "answer": "Ostrich"
+    },
+    {
+      "question": "What is the national bird of the United States?",
+      "options": ["Golden Eagle", "Bald Eagle", "Hawk", "Condor"],
+      "answer": "Bald Eagle"
+    },
+    {
+      "question": "Which bird is known for its ability to turn its head almost completely around?",
+      "options": ["Hawk", "Parrot", "Owl", "Peacock"],
+      "answer": "Owl"
+    },
+    {
+      "question": "Which bird is famous for its colorful tail feathers?",
+      "options": ["Peacock", "Hummingbird", "Robin", "Dove"],
+      "answer": "Peacock"
+    },
+    {
+      "question": "What is the smallest bird in the world?",
+      "options": ["Hummingbird", "Sparrow", "Canary", "Pigeon"],
+      "answer": "Hummingbird"
+    },
+    {
+      "question": "Which bird is known for building elaborate nests to attract mates?",
+      "options": ["Penguin", "Woodpecker", "Bowerbird", "Falcon"],
+      "answer": "Bowerbird"
+    },
+    {
+      "question": "Which bird is commonly associated with delivering babies in folklore?",
+      "options": ["Ostrich", "Stork", "Pelican", "Seagull"],
+      "answer": "Stork"
+    }
+  ]

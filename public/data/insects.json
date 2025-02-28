@@ -1,0 +1,52 @@
+[
+    {
+      "question": "Which insect is known for producing honey?",
+      "options": ["Ant", "Bee", "Butterfly", "Dragonfly"],
+      "answer": "Bee"
+    },
+    {
+      "question": "Which insect is known for its ability to glow in the dark?",
+      "options": ["Firefly", "Mosquito", "Beetle", "Grasshopper"],
+      "answer": "Firefly"
+    },
+    {
+      "question": "Which insect is known for its role in pollination?",
+      "options": ["Butterfly", "Spider", "Mosquito", "Cockroach"],
+      "answer": "Butterfly"
+    },
+    {
+      "question": "Which insect is known for its painful sting?",
+      "options": ["Wasp", "Ant", "Dragonfly", "Grasshopper"],
+      "answer": "Wasp"
+    },
+    {
+      "question": "Which insect is known for its ability to jump long distances?",
+      "options": ["Grasshopper", "Butterfly", "Bee", "Ant"],
+      "answer": "Grasshopper"
+    },
+    {
+      "question": "Which insect is known for its role in decomposing organic matter?",
+      "options": ["Beetle", "Fly", "Spider", "Dragonfly"],
+      "answer": "Beetle"
+    },
+    {
+      "question": "Which insect is known for its ability to produce silk?",
+      "options": ["Spider", "Silkworm", "Ant", "Butterfly"],
+      "answer": "Silkworm"
+    },
+    {
+      "question": "Which insect is known for its ability to carry diseases?",
+      "options": ["Mosquito", "Bee", "Butterfly", "Dragonfly"],
+      "answer": "Mosquito"
+    },
+    {
+      "question": "Which insect is known for its hard exoskeleton and pincers?",
+      "options": ["Beetle", "Ant", "Scorpion", "Grasshopper"],
+      "answer": "Beetle"
+    },
+    {
+      "question": "Which insect is known for its ability to mimic leaves or sticks?",
+      "options": ["Stick Insect", "Butterfly", "Bee", "Ant"],
+      "answer": "Stick Insect"
+    }
+  ]

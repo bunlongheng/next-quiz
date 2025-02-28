@@ -1,0 +1,52 @@
+[
+    {
+      "question": "Which reptile is known for its ability to change color?",
+      "options": ["Chameleon", "Crocodile", "Turtle", "Snake"],
+      "answer": "Chameleon"
+    },
+    {
+      "question": "Which reptile is the largest living species of turtle?",
+      "options": ["Leatherback Sea Turtle", "Galapagos Tortoise", "Green Sea Turtle", "Snapping Turtle"],
+      "answer": "Leatherback Sea Turtle"
+    },
+    {
+      "question": "Which reptile is known for its venomous bite?",
+      "options": ["Komodo Dragon", "Rattlesnake", "Gecko", "Iguana"],
+      "answer": "Rattlesnake"
+    },
+    {
+      "question": "Which reptile is known for its ability to regrow its tail?",
+      "options": ["Gecko", "Crocodile", "Turtle", "Snake"],
+      "answer": "Gecko"
+    },
+    {
+      "question": "Which reptile is known for its strong jaws and armored body?",
+      "options": ["Crocodile", "Turtle", "Chameleon", "Snake"],
+      "answer": "Crocodile"
+    },
+    {
+      "question": "Which reptile is known for its ability to glide through the air?",
+      "options": ["Flying Snake", "Gecko", "Chameleon", "Iguana"],
+      "answer": "Flying Snake"
+    },
+    {
+      "question": "Which reptile is known for its long lifespan, often over 100 years?",
+      "options": ["Galapagos Tortoise", "Crocodile", "Turtle", "Komodo Dragon"],
+      "answer": "Galapagos Tortoise"
+    },
+    {
+      "question": "Which reptile is known for its ability to swim and live in both freshwater and saltwater?",
+      "options": ["Sea Turtle", "Crocodile", "Gecko", "Iguana"],
+      "answer": "Sea Turtle"
+    },
+    {
+      "question": "Which reptile is known for its ability to climb vertical surfaces?",
+      "options": ["Gecko", "Chameleon", "Snake", "Turtle"],
+      "answer": "Gecko"
+    },
+    {
+      "question": "Which reptile is known for its ability to produce venom but is not a snake?",
+      "options": ["Gila Monster", "Komodo Dragon", "Crocodile", "Turtle"],
+      "answer": "Gila Monster"
+    }
+  ]

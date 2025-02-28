@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-purple-700 to-purple-900 p-6">
       <h1 className="text-white text-2xl md:text-3xl font-bold mb-6">Pick a Quiz 🧠</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-6xl">
         {quizzes.map((quiz) => (
           <button
             key={quiz.slug}

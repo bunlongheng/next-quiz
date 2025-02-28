@@ -9,6 +9,14 @@ export default function QuizPage() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
 
+  // Gradient colors for each option
+  const optionColors = [
+    "from-blue-500 to-purple-500", // Blue to Purple
+    "from-green-500 to-teal-500",  // Green to Teal
+    "from-orange-500 to-red-500",  // Orange to Red
+    "from-pink-500 to-indigo-500", // Pink to Indigo
+  ];
+
   useEffect(() => {
     if (!category) return;
 
@@ -26,16 +34,14 @@ export default function QuizPage() {
       setScore((prev) => prev + 1);
     }
 
-    // Move to the next question after a short delay
-    setTimeout(() => {
-      if (currentQuestionIndex + 1 < questions.length) {
-        setCurrentQuestionIndex((prev) => prev + 1);
-        setSelectedAnswer(null); // Reset selected answer
-      } else {
-        // Quiz is over, show results
-        router.push(`/results?score=${score}&total=${questions.length}`);
-      }
-    }, 1000); // 1-second delay before moving to the next question
+    // Move to the next question immediately
+    if (currentQuestionIndex + 1 < questions.length) {
+      setCurrentQuestionIndex((prev) => prev + 1);
+      setSelectedAnswer(null); // Reset selected answer
+    } else {
+      // Quiz is over, show results
+      router.push(`/results?score=${score}&total=${questions.length}`);
+    }
   };
 
   if (!category || questions.length === 0) {
@@ -53,18 +59,25 @@ export default function QuizPage() {
         <h2 className="font-semibold text-lg mb-4">
           {currentQuestion.question}
         </h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-4">
           {currentQuestion.options.map((option, i) => (
             <button
               key={i}
               onClick={() => handleAnswer(option)}
-              className={`p-4 rounded-lg transition ${
-                selectedAnswer === option
+              className={`
+                w-full p-4 rounded-lg text-left
+                bg-gradient-to-r ${optionColors[i % optionColors.length]}
+                text-white font-semibold
+                transition-all duration-300
+                hover:scale-105 hover:shadow-xl
+                focus:outline-none focus:ring-2 focus:ring-blue-300
+                ${selectedAnswer === option
                   ? option === currentQuestion.answer
-                    ? "bg-green-500 text-white"
-                    : "bg-red-500 text-white"
-                  : "bg-gray-200 hover:bg-blue-500 hover:text-white"
-              }`}
+                    ? "bg-gradient-to-r from-green-500 to-green-600 shadow-lg"
+                    : "bg-gradient-to-r from-red-500 to-red-600 shadow-lg"
+                  : ""
+                }
+              `}
               disabled={selectedAnswer !== null}
             >
               {option}

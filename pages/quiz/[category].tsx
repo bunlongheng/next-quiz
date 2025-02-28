@@ -28,12 +28,17 @@ export default function QuizPage() {
 
   const handleAnswer = (option) => {
     setSelectedAnswer(option);
-
+  
     // Check if the answer is correct
     if (option === questions[currentQuestionIndex].answer) {
       setScore((prev) => prev + 1);
+      const correctSound = new Audio("/sounds/correct.mp3");
+      correctSound.play();
+    } else {
+      const wrongSound = new Audio("/sounds/wrong.mp3");
+      wrongSound.play();
     }
-
+  
     // Move to the next question immediately
     if (currentQuestionIndex + 1 < questions.length) {
       setCurrentQuestionIndex((prev) => prev + 1);

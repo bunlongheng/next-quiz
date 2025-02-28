@@ -15,6 +15,14 @@ export default function ResultsPage() {
     }
   }, [score, total]);
 
+  // Play congrats sound if the user passes
+  useEffect(() => {
+    if (isPass) {
+      const congratsSound = new Audio("/sounds/congrats.mp3");
+      congratsSound.play();
+    }
+  }, [isPass]);
+
   // Get window dimensions for confetti
   useEffect(() => {
     const handleResize = () => {
@@ -33,7 +41,13 @@ export default function ResultsPage() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-purple-700 to-purple-900 text-white p-6">
+    <div
+      className={`min-h-screen flex flex-col items-center justify-center p-6 text-white ${
+        isPass
+          ? "bg-gradient-to-b from-green-500 to-green-700" // Green gradient for pass
+          : "bg-gradient-to-b from-red-500 to-red-700" // Red gradient for fail
+      }`}
+    >
       {/* Confetti Animation */}
       {isPass && (
         <Confetti

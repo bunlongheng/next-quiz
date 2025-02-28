@@ -12,7 +12,7 @@ export default function QuizPage() {
   
   const optionColors = [
     "from-blue-500 to-sky-800", 
-    "from-green-500 to-teal-800",  
+    "from-cyan-500 to-teal-800",  
     "from-yellow-500 to-amber-800",  
     "from-pink-500 to-indigo-800", 
   ];
@@ -49,7 +49,7 @@ export default function QuizPage() {
         
         router.push(`/results?score=${score + (isCorrect ? 1 : 0)}&total=${questions.length}`);
       }
-    }, 500); 
+    }, 700); 
   };
 
   if (!category || questions.length === 0) {
@@ -70,26 +70,26 @@ export default function QuizPage() {
         <div className="space-y-4">
           {currentQuestion.options.map((option, i) => (
             <button
-              key={i}
-              onClick={() => handleAnswer(option)}
-              className={`
-                w-full p-4 rounded-lg text-left
-                bg-gradient-to-r ${optionColors[i % optionColors.length]}
-                text-white font-semibold
-                transition-all duration-300
-                hover:scale-105 hover:shadow-xl
-                focus:outline-none focus:ring-2 focus:ring-blue-300
-                ${selectedAnswer === option
-                  ? option === currentQuestion.answer
-                    ? "bg-gradient-to-r from-green-500 to-green-600 shadow-lg" 
-                    : "bg-gradient-to-r from-red-500 to-red-600 shadow-lg" 
-                  : ""
-                }
-              `}
-              disabled={selectedAnswer !== null}
-            >
-              {option}
-            </button>
+            key={i}
+            onClick={() => handleAnswer(option)}
+            className={`
+              w-full p-4 rounded-lg text-left
+              bg-gradient-to-r ${optionColors[i % optionColors.length]}
+              text-white font-semibold
+              transition-all duration-300
+              hover:scale-105 hover:shadow-xl
+              focus:outline-none focus:ring-2 focus:ring-blue-300
+              ${selectedAnswer === option
+                ? option === currentQuestion.answer
+                  ? "bg-gradient-to-r from-green-500 to-green-900 shadow-lg shadow-green-300/50 border-2 border-green-300" // Green gradient + glow + border
+                  : "bg-gradient-to-r from-red-500 to-red-900 shadow-lg shadow-red-300/50 border-2 border-red-300" // Red gradient + glow + border
+                : ""
+              }
+            `}
+            disabled={selectedAnswer !== null}
+          >
+            {option}
+          </button>
           ))}
         </div>
       </div>

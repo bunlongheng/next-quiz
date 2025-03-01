@@ -9,27 +9,73 @@ export default function QuizPage() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
 
-  
   const optionColors = [
-    "from-blue-500 to-sky-800", 
-    "from-cyan-500 to-teal-800",  
-    "from-yellow-500 to-amber-800",  
-    "from-pink-500 to-indigo-800", 
+    "from-blue-500 to-sky-800",
+    "from-cyan-500 to-teal-800",
+    "from-yellow-500 to-amber-800",
+    "from-pink-500 to-indigo-800",
   ];
 
   useEffect(() => {
     if (!category) return;
 
     fetch(`/data/${category}.json`)
-      .then((res) => res.json())
-      .then((data) => setQuestions(data))
-      .catch((error) => console.error("Error loading questions:", error));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setQuestions(data);
+        } else {
+          console.error("Fetched data is not an array:", data);
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading questions:", error);
+      });
   }, [category]);
+
+  // Add keyboard event listener
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (selectedAnswer !== null) return; // Ignore key presses if an answer is already selected
+
+      const key = event.key.toUpperCase(); // Convert to uppercase for consistency
+      const options = questions[currentQuestionIndex]?.options || [];
+
+      // Map keys to options
+      const keyToIndex = {
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3,
+      };
+
+      const selectedIndex = keyToIndex[key];
+      if (selectedIndex !== undefined && selectedIndex < options.length) {
+        handleAnswer(options[selectedIndex]);
+      }
+    };
+
+    // Attach the event listener
+    window.addEventListener("keydown", handleKeyPress);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [currentQuestionIndex, questions, selectedAnswer]);
 
   const handleAnswer = (option) => {
     setSelectedAnswer(option);
 
-    
     const isCorrect = option === questions[currentQuestionIndex].answer;
     if (isCorrect) {
       setScore((prev) => prev + 1);
@@ -40,16 +86,14 @@ export default function QuizPage() {
       wrongSound.play();
     }
 
-    
     setTimeout(() => {
       if (currentQuestionIndex + 1 < questions.length) {
         setCurrentQuestionIndex((prev) => prev + 1);
-        setSelectedAnswer(null); 
+        setSelectedAnswer(null);
       } else {
-        
         router.push(`/results?score=${score + (isCorrect ? 1 : 0)}&total=${questions.length}`);
       }
-    }, 700); 
+    }, 700);
   };
 
   if (!category || questions.length === 0) {
@@ -68,28 +112,28 @@ export default function QuizPage() {
           {currentQuestion.question}
         </h2>
         <div className="space-y-4">
-          {currentQuestion.options.map((option, i) => (
+          {currentQuestion.options && Array.isArray(currentQuestion.options) && currentQuestion.options.map((option, i) => (
             <button
-            key={i}
-            onClick={() => handleAnswer(option)}
-            className={`
-              w-full p-4 rounded-lg text-left
-              bg-gradient-to-r ${optionColors[i % optionColors.length]}
-              text-white font-semibold
-              transition-all duration-300
-              hover:scale-105 hover:shadow-xl
-              focus:outline-none focus:ring-2 focus:ring-blue-300
-              ${selectedAnswer === option
-                ? option === currentQuestion.answer
-                  ? "bg-gradient-to-r from-green-500 to-green-900 shadow-lg shadow-green-300/50 border-2 border-green-300" // Green gradient + glow + border
-                  : "bg-gradient-to-r from-red-500 to-red-900 shadow-lg shadow-red-300/50 border-2 border-red-300" // Red gradient + glow + border
-                : ""
-              }
-            `}
-            disabled={selectedAnswer !== null}
-          >
-            {option}
-          </button>
+              key={i}
+              onClick={() => handleAnswer(option)}
+              className={`
+                w-full p-4 rounded-lg text-left
+                bg-gradient-to-r ${optionColors[i % optionColors.length]}
+                text-white font-semibold
+                transition-all duration-300
+                hover:scale-105 hover:shadow-xl
+                focus:outline-none focus:ring-2 focus:ring-blue-300
+                ${selectedAnswer === option
+                  ? option === currentQuestion.answer
+                    ? "bg-gradient-to-r from-green-500 to-green-900 shadow-lg shadow-green-300/50 border-2 border-green-300"
+                    : "bg-gradient-to-r from-red-500 to-red-900 shadow-lg shadow-red-300/50 border-2 border-red-300"
+                  : ""
+                }
+              `}
+              disabled={selectedAnswer !== null}
+            >
+              {`${String.fromCharCode(65 + i)}. ${option}`} {/* Add A, B, C, D labels */}
+            </button>
           ))}
         </div>
       </div>

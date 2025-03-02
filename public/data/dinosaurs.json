@@ -11,8 +11,8 @@
     },
     {
       "question": "What did most dinosaurs eat?",
-      "options": ["Meat", "Plants", "Both", "Insects"],
-      "answer": "Both"
+      "options": ["Meat", "Plants", "Meat & Plants", "Insects"],
+      "answer": "Meat & Plants"
     },
     {
       "question": "Which dinosaur is known for its long neck?",

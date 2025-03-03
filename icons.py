@@ -1,7 +1,6 @@
 import os
 from PIL import Image
 
-# Source image path
 source_image = "public/icon.png"
 
 # Ensure the file exists

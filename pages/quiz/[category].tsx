@@ -1,12 +1,19 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+// Define the type for a question
+type Question = {
+  question: string;
+  options: string[];
+  answer: string;
+};
+
 export default function QuizPage() {
   const router = useRouter();
   const { category } = router.query;
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState<Question[]>([]); // Explicitly define the type
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null); // Explicitly define the type
   const [score, setScore] = useState(0);
 
   const optionColors = [
@@ -26,7 +33,7 @@ export default function QuizPage() {
         }
         return res.json();
       })
-      .then((data) => {
+      .then((data: Question[]) => {
         if (Array.isArray(data)) {
           setQuestions(data);
         } else {
@@ -40,7 +47,7 @@ export default function QuizPage() {
 
   // Add keyboard event listener
   useEffect(() => {
-    const handleKeyPress = (event) => {
+    const handleKeyPress = (event: KeyboardEvent) => {
       if (selectedAnswer !== null) return; // Ignore key presses if an answer is already selected
 
       const key = event.key.toUpperCase(); // Convert to uppercase for consistency
@@ -52,15 +59,19 @@ export default function QuizPage() {
         "2": 1,
         "3": 2,
         "4": 3,
-        "A": 0,
-        "B": 1,
-        "C": 2,
-        "D": 3,
+        A: 0,
+        B: 1,
+        C: 2,
+        D: 3,
       };
 
-      const selectedIndex = keyToIndex[key];
-      if (selectedIndex !== undefined && selectedIndex < options.length) {
-        handleAnswer(options[selectedIndex]);
+      // Use a type assertion to ensure `key` is a valid index
+      const validKeys = ["1", "2", "3", "4", "A", "B", "C", "D"];
+      if (validKeys.includes(key)) {
+        const selectedIndex = keyToIndex[key as keyof typeof keyToIndex];
+        if (selectedIndex !== undefined && selectedIndex < options.length) {
+          handleAnswer(options[selectedIndex]);
+        }
       }
     };
 
@@ -73,7 +84,7 @@ export default function QuizPage() {
     };
   }, [currentQuestionIndex, questions, selectedAnswer]);
 
-  const handleAnswer = (option) => {
+  const handleAnswer = (option: string) => {
     setSelectedAnswer(option);
 
     const isCorrect = option === questions[currentQuestionIndex].answer;
@@ -91,7 +102,9 @@ export default function QuizPage() {
         setCurrentQuestionIndex((prev) => prev + 1);
         setSelectedAnswer(null);
       } else {
-        router.push(`/results?score=${score + (isCorrect ? 1 : 0)}&total=${questions.length}`);
+        router.push(
+          `/results?score=${score + (isCorrect ? 1 : 0)}&total=${questions.length}`
+        );
       }
     }, 700);
   };
@@ -112,29 +125,33 @@ export default function QuizPage() {
           {currentQuestion.question}
         </h2>
         <div className="space-y-4">
-          {currentQuestion.options && Array.isArray(currentQuestion.options) && currentQuestion.options.map((option, i) => (
-            <button
-              key={i}
-              onClick={() => handleAnswer(option)}
-              className={`
-                w-full p-4 rounded-lg text-left
-                bg-gradient-to-r ${optionColors[i % optionColors.length]}
-                text-white font-semibold
-                transition-all duration-300
-                hover:scale-105 hover:shadow-xl
-                focus:outline-none focus:ring-2 focus:ring-blue-300
-                ${selectedAnswer === option
-                  ? option === currentQuestion.answer
-                    ? "bg-gradient-to-r from-green-500 to-green-900 shadow-lg shadow-green-300/50 border-2 border-green-300"
-                    : "bg-gradient-to-r from-red-500 to-red-900 shadow-lg shadow-red-300/50 border-2 border-red-300"
-                  : ""
-                }
-              `}
-              disabled={selectedAnswer !== null}
-            >
-              {`${String.fromCharCode(65 + i)}. ${option}`} {/* Add A, B, C, D labels */}
-            </button>
-          ))}
+          {currentQuestion.options &&
+            Array.isArray(currentQuestion.options) &&
+            currentQuestion.options.map((option, i) => (
+              <button
+                key={i}
+                onClick={() => handleAnswer(option)}
+                className={`
+                  w-full p-4 rounded-lg text-left
+                  bg-gradient-to-r ${optionColors[i % optionColors.length]}
+                  text-white font-semibold
+                  transition-all duration-300
+                  hover:scale-105 hover:shadow-xl
+                  focus:outline-none focus:ring-2 focus:ring-blue-300
+                  ${
+                    selectedAnswer === option
+                      ? option === currentQuestion.answer
+                        ? "bg-gradient-to-r from-green-500 to-green-900 shadow-lg shadow-green-300/50 border-2 border-green-300"
+                        : "bg-gradient-to-r from-red-500 to-red-900 shadow-lg shadow-red-300/50 border-2 border-red-300"
+                      : ""
+                  }
+                `}
+                disabled={selectedAnswer !== null}
+              >
+                {`${String.fromCharCode(65 + i)}. ${option}`}{" "}
+                {/* Add A, B, C, D labels */}
+              </button>
+            ))}
         </div>
       </div>
       <div className="mt-6 text-lg">
